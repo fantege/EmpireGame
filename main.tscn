@@ -1,6 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxb0omrt2dqwf"]
+[gd_scene load_steps=4 format=3 uid="uid://cxb0omrt2dqwf"]
 
 [ext_resource type="Script" uid="uid://cdsnpjbuhlxwa" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Theme" uid="uid://bq0qd65osa6xf" path="res://default_theme.tres" id="2_default_theme"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ig7tw")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+color = Color(0.117647, 0.117647, 0.196078, 1.0)
+
+[node name="GameTitle" type="Label" parent="."]
+theme = ExtResource("2_default_theme")
+position = Vector2(400.0, 50.0)
+text = "帝国：博弈"
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+
+[node name="CardContainer" type="HBoxContainer" parent="."]
+theme = ExtResource("2_default_theme")
+position = Vector2(200.0, 150.0)
+size = Vector2(800.0, 300.0)
+theme_override_constants/separation = 20
+
+[node name="Card1" type="Panel" parent="CardContainer"]
+theme = ExtResource("2_default_theme")
+custom_minimum_size = Vector2(150.0, 250.0)
+theme_override_styles/panel = SubResource("1")
+
+[node name="Card1Label" type="Label" parent="Card1"]
+theme = ExtResource("2_default_theme")
+position = Vector2(10.0, 10.0)
+text = "维多利亚女王\n领袖卡\n\n技能: 殖民开拓\n每回合额外获得1张殖民资源卡"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Card2" type="Panel" parent="CardContainer"]
+theme = ExtResource("2_default_theme")
+custom_minimum_size = Vector2(150.0, 250.0)
+theme_override_styles/panel = SubResource("1")
+
+[node name="Card2Label" type="Label" parent="Card2"]
+theme = ExtResource("2_default_theme")
+position = Vector2(10.0, 10.0)
+text = "俾斯麦\n领袖卡\n\n技能: 军事同盟\n强制与其他国家共同攻击第三方"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Card3" type="Panel" parent="CardContainer"]
+theme = ExtResource("2_default_theme")
+custom_minimum_size = Vector2(150.0, 250.0)
+theme_override_styles/panel = SubResource("1")
+
+[node name="Card3Label" type="Label" parent="Card3"]
+theme = ExtResource("2_default_theme")
+position = Vector2(10.0, 10.0)
+text = "谷物法废除\n政策卡\n\n效果: 降低工业资源获取成本，提升贸易路线收益"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[resource]
+type = "StyleBoxFlat"
+id = "1"
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.196078, 0.196078, 0.352941, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.501961, 0.501961, 0.701961, 1.0)
