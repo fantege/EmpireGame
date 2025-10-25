@@ -1,6 +1,3 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://dp1qd65osa6xf"]
 
 [resource]
-default_font = ExtResource("1_font")
-
-[ext_resource type="FontFile" uid="uid://bq0qd65osa6xf" path="res://placeholder_font.tres" id="1_font"]
