@@ -48,36 +48,68 @@ func create_leader_cards():
 	
 	card_nodes.clear()
 	
+	print("开始创建卡牌UI，卡牌数量: ", card_data.size())
+	print("卡牌容器: ", card_container.name, " 子节点数: ", card_container.get_child_count())
+	
+	# 设置容器间距
+	if card_container.has_method("add_theme_constant_override"):
+		card_container.add_theme_constant_override("separation", 20)  # 卡牌间距20像素
+	
+	# 计算最佳卡牌尺寸以适应窗口
+	var scroll_container = get_node("CardScrollContainer")
+	var available_width = scroll_container.size.x - 40  # 留出一些边距
+	var max_card_width = available_width / card_data.size()
+	var target_card_width = min(max_card_width, 160)  # 使用计算值或默认值中的较小者
+	
+	print("可用宽度: ", available_width, " 最大卡牌宽度: ", max_card_width, " 目标宽度: ", target_card_width)
+	
 	# 为每张领袖卡创建UI
 	for current_card_info in card_data:
-		var card_node = create_card_ui(current_card_info)
+		var card_node = create_card_ui(current_card_info, target_card_width)
 		if card_node:
 			card_container.add_child(card_node)
 			card_nodes.append(card_node)
+			print("创建卡牌: ", current_card_info.cardName)
+	
+	print("卡牌创建完成，总卡牌数: ", card_nodes.size())
 
 # 创建单个卡牌UI
-func create_card_ui(card_info):
-	# 创建卡牌面板
+func create_card_ui(card_info, card_width = 160):
+	# 创建卡牌面板 - 4:5 比例 (宽4高5)
 	var card_panel = Panel.new()
-	card_panel.custom_minimum_size = Vector2(200, 300)
+	var card_height = card_width * 5.0 / 4.0  # 保持4:5比例
+	card_panel.custom_minimum_size = Vector2(card_width, card_height)
 	card_panel.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	card_panel.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	
+	# 确保卡牌可见
+	card_panel.visible = true
+	
+	print("创建卡牌面板: ", card_info.cardName, " 大小: ", card_panel.custom_minimum_size)
 	
 	# 应用样式
 	if ResourceLoader.exists("res://card_style.tres"):
 		var style = load("res://card_style.tres")
 		card_panel.add_theme_stylebox_override("panel", style)
+	else:
+		# 如果没有样式文件，创建默认样式
+		var default_style = StyleBoxFlat.new()
+		default_style.bg_color = Color(0.2, 0.3, 0.5, 0.8)
+		default_style.border_color = Color(0.8, 0.8, 0.9, 1)
+		default_style.border_width_top = 2
+		default_style.border_width_bottom = 2
+		default_style.border_width_left = 2
+		default_style.border_width_right = 2
+		card_panel.add_theme_stylebox_override("panel", default_style)
 	
 	# 创建卡牌内容标签
 	var card_label = Label.new()
 	card_label.name = "CardLabel"
-	# 设置布局模式为锚点模式
 	card_label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	card_label.anchors_preset = Control.PRESET_FULL_RECT
-	card_label.offset_left = 10
-	card_label.offset_top = 10
-	card_label.offset_right = -10
-	card_label.offset_bottom = -10
+	card_label.offset_left = 15
+	card_label.offset_top = 15
+	card_label.offset_right = -15
+	card_label.offset_bottom = -15
 	card_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	card_label.grow_vertical = Control.GROW_DIRECTION_BOTH
 	
