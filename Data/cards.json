@@ -3,14 +3,16 @@
     "id": "victoria",
     "cardName": "维多利亚女王",
     "country": 0,
+    "countryName": "英国",
+    "countryColor": "#C8102E",
     "era": 1837,
-    "influence": 5,
+    "influence": 8,
     "faction": 0,
     "skills": [
       {
         "id": "sun_never_sets",
         "name": "日不落帝国",
-        "description": "抽取2张殖民资源卡，议会区域工业派影响力+2",
+        "description": "抽取2张殖民资源卡，工业派影响力+2，每回合只能使用一次",
         "trigger": 0
       }
     ]
@@ -19,14 +21,16 @@
     "id": "bismarck",
     "cardName": "奥托·冯·俾斯麦",
     "country": 1,
+    "countryName": "德国",
+    "countryColor": "#008B8B",
     "era": 1862,
-    "influence": 4,
+    "influence": 6,
     "faction": 1,
     "skills": [
       {
         "id": "blood_iron",
         "name": "铁血政策",
-        "description": "对敌方造成3点伤害，抽1张牌",
+        "description": "对敌方一个地区造成3点破坏，抽1张牌",
         "trigger": 0
       }
     ]
@@ -35,14 +39,16 @@
     "id": "napoleon_iii",
     "cardName": "拿破仑三世",
     "country": 2,
+    "countryName": "法国",
+    "countryColor": "#0055A4",
     "era": 1852,
-    "influence": 4,
+    "influence": 6,
     "faction": 1,
     "skills": [
       {
         "id": "paris_reconstruction",
         "name": "巴黎改造",
-        "description": "获得3点工业资源，但声望-1",
+        "description": "获得3点工业资源，但财政资源-1",
         "trigger": 0
       }
     ]
@@ -51,14 +57,16 @@
     "id": "alexander_ii",
     "cardName": "亚历山大二世",
     "country": 3,
+    "countryName": "俄罗斯",
+    "countryColor": "#D52B1E",
     "era": 1855,
-    "influence": 4,
+    "influence": 5,
     "faction": 0,
     "skills": [
       {
         "id": "serf_emancipation",
         "name": "农奴改革",
-        "description": "每回合可免费使用1张改革卡，弃1张手牌",
+        "description": "每回合可免费使用1张政策卡，弃1张手牌",
         "trigger": 0
       }
     ]
@@ -67,14 +75,16 @@
     "id": "abdul_mejid",
     "cardName": "阿卜杜勒-迈吉德一世",
     "country": 4,
+    "countryName": "奥斯曼帝国",
+    "countryColor": "#E30A17",
     "era": 1839,
-    "influence": 3,
+    "influence": 4,
     "faction": 0,
     "skills": [
       {
         "id": "tanzimat",
         "name": "坦志麦特改革",
-        "description": "支付1点资源抽2张卡，本回合禁止再抽卡",
+        "description": "支付1点财政资源抽2张卡，每回合只能使用一次",
         "trigger": 0
       }
     ]
@@ -83,6 +93,8 @@
     "id": "daoguang",
     "cardName": "道光帝",
     "country": 5,
+    "countryName": "中国",
+    "countryColor": "#DE2910",
     "era": 1820,
     "influence": 3,
     "faction": 1,
@@ -90,7 +102,7 @@
       {
         "id": "opium_destruction",
         "name": "虎门销烟",
-        "description": "敌方特殊卡50%概率失效，触发后声望-2",
+        "description": "当其他国家使用政策卡时，此政策卡25%概率失效，触发后声望-2",
         "trigger": 0
       }
     ]
@@ -99,6 +111,8 @@
     "id": "muhammad_ali",
     "cardName": "穆罕默德·阿里",
     "country": 6,
+    "countryName": "埃及",
+    "countryColor": "#CE1126",
     "era": 1805,
     "influence": 3,
     "faction": 0,
@@ -106,7 +120,7 @@
       {
         "id": "modernization_reforms",
         "name": "现代化改革",
-        "description": "工业区域资源+1，重铸1张工业卡",
+        "description": "工业资源+1，重铸1张工业卡，每回合只能使用2次",
         "trigger": 0
       }
     ]
@@ -115,14 +129,16 @@
     "id": "isabella_ii",
     "cardName": "伊莎贝拉二世",
     "country": 7,
+    "countryName": "西班牙",
+    "countryColor": "#AA151B",
     "era": 1833,
-    "influence": 3,
+    "influence": 4,
     "faction": 1,
     "skills": [
       {
         "id": "constitutional_monarchy",
         "name": "君主立宪",
-        "description": "控制议会时跳过敌方特殊卡回合",
+        "description": "控制议会时可以使任意一名敌方政策卡无效",
         "trigger": 0
       }
     ]
@@ -131,8 +147,10 @@
     "id": "franz_joseph",
     "cardName": "弗朗茨·约瑟夫一世",
     "country": 8,
+    "countryName": "奥地利",
+    "countryColor": "#ED2939",
     "era": 1848,
-    "influence": 4,
+    "influence": 6,
     "faction": 1,
     "skills": [
       {
@@ -147,8 +165,10 @@
     "id": "cleveland",
     "cardName": "格罗夫·克利夫兰",
     "country": 9,
+    "countryName": "美国",
+    "countryColor": "#3C3B6E",
     "era": 1885,
-    "influence": 2,
+    "influence": 4,
     "faction": 0,
     "skills": [
       {

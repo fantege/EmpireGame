@@ -1,0 +1,814 @@
+[
+  {
+    "id": 1,
+    "name": "英格兰",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 4,
+      "colonial": 0,
+      "financial": 2,
+      "military": 0
+    },
+    "initialControl": {
+      "0": 100
+    }
+  },
+  {
+    "id": 2,
+    "name": "苏格兰",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 3,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "0": 100
+    }
+  },
+  {
+    "id": 3,
+    "name": "法国北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 3,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "2": 100
+    }
+  },
+  {
+    "id": 4,
+    "name": "法国南部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "2": 100
+    }
+  },
+  {
+    "id": 5,
+    "name": "普鲁士",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 4,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "1": 100
+    }
+  },
+  {
+    "id": 6,
+    "name": "巴伐利亚",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 3,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "1": 100
+    }
+  },
+  {
+    "id": 7,
+    "name": "奥地利",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 3,
+      "colonial": 0,
+      "financial": 2,
+      "military": 0
+    },
+    "initialControl": {
+      "8": 100
+    }
+  },
+  {
+    "id": 8,
+    "name": "匈牙利",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "8": 100
+    }
+  },
+  {
+    "id": 9,
+    "name": "意大利北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 10,
+    "name": "意大利南部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 11,
+    "name": "西班牙北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "7": 100
+    }
+  },
+  {
+    "id": 12,
+    "name": "西班牙南部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "7": 100
+    }
+  },
+  {
+    "id": 13,
+    "name": "低地地区",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 2,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 14,
+    "name": "瑞典",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 15,
+    "name": "俄罗斯西部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "3": 100
+    }
+  },
+  {
+    "id": 16,
+    "name": "俄罗斯中部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "3": 100
+    }
+  },
+  {
+    "id": 17,
+    "name": "乌克兰",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 5,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "3": 100
+    }
+  },
+  {
+    "id": 18,
+    "name": "波兰",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "1": 40,
+      "3": 40,
+      "8": 20
+    }
+  },
+  {
+    "id": 19,
+    "name": "巴尔干西部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "4": 100
+    }
+  },
+  {
+    "id": 20,
+    "name": "巴尔干东部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "4": 100
+    }
+  },
+  {
+    "id": 21,
+    "name": "安纳托利亚",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "4": 100
+    }
+  },
+  {
+    "id": 22,
+    "name": "北海",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 23,
+    "name": "波罗的海",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 24,
+    "name": "西地中海",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 25,
+    "name": "东地中海",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 26,
+    "name": "华北",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "5": 100
+    }
+  },
+  {
+    "id": 27,
+    "name": "华南",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 5,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "5": 100
+    }
+  },
+  {
+    "id": 28,
+    "name": "中国东北",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "5": 100
+    }
+  },
+  {
+    "id": 29,
+    "name": "日本",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 2,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 30,
+    "name": "朝鲜",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 31,
+    "name": "印度北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "0": 100
+    }
+  },
+  {
+    "id": 32,
+    "name": "印度南部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "0": 100
+    }
+  },
+  {
+    "id": 33,
+    "name": "波斯北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 2,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 34,
+    "name": "波斯南部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 2,
+      "financial": 1,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 35,
+    "name": "中亚北部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 1,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "3": 100
+    }
+  },
+  {
+    "id": 36,
+    "name": "东南亚半岛",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 0,
+      "colonial": 4,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 37,
+    "name": "下埃及",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 3,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "6": 100
+    }
+  },
+  {
+    "id": 38,
+    "name": "上埃及",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "6": 100
+    }
+  },
+  {
+    "id": 39,
+    "name": "摩洛哥",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 1,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 40,
+    "name": "阿尔及利亚",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 1,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "2": 100
+    }
+  },
+  {
+    "id": 41,
+    "name": "突尼斯",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 1,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 42,
+    "name": "利比亚",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 1,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 43,
+    "name": "西非海岸",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 44,
+    "name": "中非",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 45,
+    "name": "东非",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 46,
+    "name": "南非",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 0,
+      "colonial": 3,
+      "financial": 3,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 47,
+    "name": "撒哈拉沙漠",
+    "type": "不可通行地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 48,
+    "name": "喜马拉雅山脉",
+    "type": "不可通行地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 49,
+    "name": "美国东部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 4,
+      "industrial": 3,
+      "colonial": 0,
+      "financial": 2,
+      "military": 0
+    },
+    "initialControl": {
+      "9": 100
+    }
+  },
+  {
+    "id": 50,
+    "name": "美国西部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 1,
+      "colonial": 0,
+      "financial": 3,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 51,
+    "name": "加拿大东部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 2,
+      "industrial": 1,
+      "colonial": 2,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "0": 100
+    }
+  },
+  {
+    "id": 52,
+    "name": "加拿大西部",
+    "type": "陆上地区",
+    "resources": {
+      "agricultural": 1,
+      "industrial": 0,
+      "colonial": 2,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-2": 100
+    }
+  },
+  {
+    "id": 53,
+    "name": "加勒比海",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  },
+  {
+    "id": 54,
+    "name": "印度洋",
+    "type": "海上地区",
+    "resources": {
+      "agricultural": 0,
+      "industrial": 0,
+      "colonial": 0,
+      "financial": 0,
+      "military": 0
+    },
+    "initialControl": {
+      "-1": 100
+    }
+  }
+]

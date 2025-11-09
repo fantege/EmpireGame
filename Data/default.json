@@ -1,0 +1,170 @@
+[
+  {
+    "id": "coal_mine",
+    "cardName": "煤矿开采",
+    "type": "经济",
+    "description": "获得2点工业资源",
+    "cost": {"industrial": 1, "financial": 1}
+  },
+  {
+    "id": "steel_mill",
+    "cardName": "钢铁厂",
+    "type": "经济",
+    "description": "获得1点工业资源，工业产量+1",
+    "cost": {"industrial": 2, "financial": 1}
+  },
+  {
+    "id": "railway_construction",
+    "cardName": "铁路建设",
+    "type": "经济",
+    "description": "农业、工业资源产量提升15%，持续2回合",
+    "cost": {"industrial": 2, "financial": 2}
+  },
+  {
+    "id": "textile_factory",
+    "cardName": "纺织工厂",
+    "type": "经济",
+    "description": "财政资源产量+2",
+    "cost": {"agricultural": 1, "financial": 2}
+  },
+  {
+    "id": "banking_system",
+    "cardName": "银行体系",
+    "type": "经济",
+    "description": "手牌上限+2，每回合额外抽1张牌",
+    "cost": {"financial": 4}
+  },
+  {
+    "id": "infantry_regiment",
+    "cardName": "步兵团",
+    "type": "军事",
+    "description": "获得3点陆军力量投射",
+    "cost": {"military": 1, "financial": 2}
+  },
+  {
+    "id": "artillery_battery",
+    "cardName": "炮兵连",
+    "type": "军事",
+    "description": "对敌方区域造成2点破坏",
+    "cost": {"industrial": 1, "military": 2}
+  },
+  {
+    "id": "naval_squadron",
+    "cardName": "海军中队",
+    "type": "军事",
+    "description": "海军力量投射+2",
+    "cost": {"industrial": 2, "military": 2}
+  },
+  {
+    "id": "military_academy",
+    "cardName": "军事学院",
+    "type": "军事",
+    "description": "陆军力量投射+1",
+    "cost": {"financial": 3, "military": 1}
+  },
+  {
+    "id": "colonial_outpost",
+    "cardName": "殖民前哨",
+    "type": "殖民",
+    "description": "在未殖民区域获得任意一个地区的10%",
+    "cost": {"colonial": 1, "financial": 1}
+  },
+    {
+    "id": "colonial_development",
+    "cardName": "殖民发展",
+    "type": "殖民",
+    "description": "选择一个没有控制100%的地区，获得该地区的10%",
+    "cost": {"colonial": 1, "financial": 1}
+  },
+  {
+    "id": "spice_trade",
+    "cardName": "香料贸易",
+    "type": "殖民",
+    "description": "立即获得3点财政资源",
+    "cost": {"colonial": 1, "financial": 1}
+  },
+  {
+    "id": "cotton_plantation",
+    "cardName": "棉花种植园",
+    "type": "殖民",
+    "description": "殖民资源产量+1",
+    "cost": {"agricultural": 1, "colonial": 1}
+  },
+  {
+    "id": "sugar_cane",
+    "cardName": "甘蔗种植",
+    "type": "殖民",
+    "description": "获得2点财政资源",
+    "cost": {"agricultural": 1, "colonial": 1}
+  },
+  {
+    "id": "telegraph_network",
+    "cardName": "电报网络",
+    "type": "科技",
+    "description": "抽1张牌，领导力+1",
+    "cost": {"industrial": 1, "financial": 1}
+  },
+  {
+    "id": "steam_engine",
+    "cardName": "蒸汽机",
+    "type": "科技",
+    "description": "工业产量+20%",
+    "cost": {"industrial": 2, "financial": 2}
+  },
+  {
+    "id": "electric_power",
+    "cardName": "电力",
+    "type": "科技",
+    "description": "每回合额外抽1张牌",
+    "cost": {"industrial": 1, "financial": 1}
+  },
+  {
+    "id": "diplomatic_enovy",
+    "cardName": "外交使节",
+    "type": "外交",
+    "description": "声望+1",
+    "cost": {"financial": 1}
+  },
+  {
+    "id": "trade_agreement",
+    "cardName": "贸易协定",
+    "type": "外交",
+    "description": "与目标国家建立贸易关系，双方农业、工业资源产量+1",
+    "cost": {"financial": 2}
+  },
+  {
+    "id": "neutrality_pact",
+    "cardName": "中立条约",
+    "type": "外交",
+    "description": "2回合内不可以被宣战",
+    "cost": {"financial": 2, "military": 1}
+  },
+  {
+    "id": "propaganda_campaign",
+    "cardName": "宣传运动",
+    "type": "外交",
+    "description": "声望+2，领导力+1",
+    "cost": {"financial": 2}
+  },
+  {
+    "id": "port_expansion",
+    "cardName": "港口扩建",
+    "type": "基建",
+    "description": "海军力量投射+2，每回合消耗1点财政资源",
+    "cost": {"industrial": 2, "financial": 2}
+  },
+  {
+    "id": "farm_mechanization",
+    "cardName": "农业机械化",
+    "type": "农业",
+    "description": "农业资源产量提升25%",
+    "cost": {"industrial": 1, "agricultural": 1}
+  },
+  {
+    "id": "food_reserves",
+    "cardName": "粮食储备",
+    "type": "农业",
+    "description": "农业派影响力+2，满意度+1，领导力+1",
+    "cost": {"agricultural": 2}
+  }
+]

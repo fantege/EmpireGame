@@ -1,0 +1,98 @@
+[
+  {
+    "id": "corn_laws_repeal",
+    "cardName": "谷物法废除",
+    "era": 1846,
+    "influenceCost": 3,
+    "description": "工业资源产量+25%，提升贸易路线收益25%",
+    "history": "1846年英国废除《谷物法》，标志着自由贸易政策的胜利，推动了工业资本主义发展"
+  },
+  {
+    "id": "blood_iron_policy",
+    "cardName": "铁血法案",
+    "era": 1862,
+    "influenceCost": 4,
+    "description": "临时提升军事资源产量50%，持续2回合",
+    "history": "1862年俾斯麦提出铁血政策，通过王朝战争实现德意志统一"
+  },
+  {
+    "id": "colonial_expansion",
+    "cardName": "殖民扩张法案",
+    "era": 1858,
+    "influenceCost": 3,
+    "description": "每殖民1个与首都不相连的海外领土，殖民资源+1，殖民资源获取速度+40%",
+    "history": "维多利亚时期列强通过殖民法案加强海外统治和资源掠夺"
+  },
+  {
+    "id": "free_trade_agreement",
+    "cardName": "自由贸易协定",
+    "era": 1860,
+    "influenceCost": 2,
+    "description": "所有国家资源产量提升25%，与其他国家外交关系+1",
+    "history": "19世纪中期欧洲各国签订的贸易协定，推动全球化贸易体系"
+  },
+  {
+    "id": "military_alliance",
+    "cardName": "军事同盟条约",
+    "era": 1879,
+    "influenceCost": 3,
+    "description": "强制与其他一名国家共同攻击第三方，军事资源产量+30%",
+    "history": "维多利亚时代欧洲各国形成的复杂军事同盟体系"
+  },
+  {
+    "id": "urban_redevelopment",
+    "cardName": "城市改造计划",
+    "era": 1853,
+    "influenceCost": 3,
+    "description": "工业资源产量+2，但每回合消耗1点财政资源",
+    "history": "19世纪中叶欧洲各大城市进行的现代化改造和基础设施升级"
+  },
+  {
+    "id": "serf_emancipation",
+    "cardName": "农奴解放法令",
+    "era": 1861,
+    "influenceCost": 4,
+    "description": "农业资源产量提升50%，但军事资源产量暂时下降30%，所有效果持续3回合",
+    "history": "19世纪欧洲多国推行的农奴制改革，解放生产力"
+  },
+  {
+    "id": "modernization_reforms",
+    "cardName": "现代化改革",
+    "era": 1839,
+    "influenceCost": 3,
+    "description": "所有资源产量提升15%，保守派影响力-1，满意度-2",
+    "history": "19世纪各国推行的现代化改革运动，应对工业革命冲击"
+  },
+  {
+    "id": "industrial_self_strengthening",
+    "cardName": "工业自强运动",
+    "era": 1861,
+    "influenceCost": 3,
+    "description": "工业资源产量提升25%，保守派影响力-2，满意度-3，持续3回合",
+    "history": "后发国家引进西方工业技术的现代化努力"
+  },
+  {
+    "id": "infrastructure_development",
+    "cardName": "基础设施建设",
+    "era": 1820,
+    "influenceCost": 3,
+    "description": "工业区域资源+2，农业资源+1",
+    "history": "铁路、运河等交通基础设施的大规模建设时期"
+  },
+  {
+    "id": "naval_expansion",
+    "cardName": "海军扩张计划",
+    "era": 1889,
+    "influenceCost": 4,
+    "description": "海军力量投射提升10%，每回合消耗1点财政资源，持续3回合",
+    "history": "19世纪末各国海军军备竞赛的开端"
+  },
+  {
+    "id": "education_reform",
+    "cardName": "教育改革法案",
+    "era": 1870,
+    "influenceCost": 2,
+    "description": "工业资源产量+1，农业资源产量-1，保守派影响力-1，满意度-1，持续4回合",
+    "history": "维多利亚时代推行的普及教育制度变革"
+  }
+]

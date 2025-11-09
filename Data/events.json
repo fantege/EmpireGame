@@ -1,0 +1,110 @@
+[
+  {
+    "id": "opium_war",
+    "cardName": "鸦片战争",
+    "era": 1840,
+    "triggerCondition": "第二回合",
+    "targetCountry": 0,
+    "description": "触发后英国声望+2，清国声望-2，清国所有政治派系满意度-1，英国所有政治派系满意度+1，清国每回合需要将数量>1的资源支付1点给英国",
+    "history": "1839-1842年英国对中国发动的贸易战争，迫使中国开放通商口岸"
+  },
+  {
+    "id": "crimean_war",
+    "cardName": "克里米亚战争",
+    "era": 1853,
+    "triggerCondition": "第5回合后，英国、法国、奥斯曼处于和平",
+    "targetCountry": 0,
+    "description": "参战国家军事资源消耗增加1点，英国、法国、奥斯曼向俄国宣战",
+    "history": "1853-1856年俄国与英法土撒丁联军之间的战争，改变了欧洲力量平衡"
+  },
+  {
+    "id": "indian_rebellion",
+    "cardName": "印度民族起义",
+    "era": 1857,
+    "triggerCondition": "英国玩家控制印度区域且威望值低于5",
+    "targetCountry": 0,
+    "description": "英国殖民资源产量减少50%，持续2回合",
+    "history": "1857-1858年印度反对英国东印度公司统治的大规模起义"
+  },
+  {
+    "id": "franco_prussian_war",
+    "cardName": "普法战争",
+    "era": 1870,
+    "triggerCondition": "第8回合后，德国军事资源超过法国",
+    "targetCountry": 1,
+    "description": "法国割让阿尔萨斯-洛林区域给德国",
+    "history": "1870-1871年普鲁士与法国的战争，导致德意志帝国建立和法国第二帝国灭亡"
+  },
+  {
+    "id": "sadowa_battle",
+    "cardName": "萨多瓦战役",
+    "era": 1866,
+    "triggerCondition": "德国该回合玩家打出军事卡牌",
+    "targetCountry": 1,
+    "description": "德国",
+    "history": "1866年普奥战争决定性战役，奠定普鲁士在德意志的主导地位"
+  },
+  {
+    "id": "great_exhibition",
+    "cardName": "大博览会",
+    "era": 1851,
+    "triggerCondition": "英国工业资源产量全场最高",
+    "targetCountry": 0,
+    "description": "英国全资源产量提升30%",
+    "history": "1851年伦敦万国工业博览会，展示英国工业革命成就"
+  },
+  {
+    "id": "belgian_neutrality",
+    "cardName": "比利时中立公约",
+    "era": 1839,
+    "triggerCondition": "任意欧洲国家控制低地国家区域",
+    "targetCountry": 0,
+    "description": "该控制低地地区的国家声望+2并失去低地地区，但所有国家不可以控制低地国家区域",
+    "history": "1839年欧洲列强承认比利时永久中立地位的国际条约"
+  },
+  {
+    "id": "paris_commune",
+    "cardName": "巴黎公社",
+    "era": 1871,
+    "triggerCondition": "普法战争事件卡已经触发，且法国声望值低于2",
+    "targetCountry": 2,
+    "description": "法国政府暂时失去对巴黎控制，所有资源产量减少25%，但所有国家不可以控制巴黎区域，持续2回合",
+    "history": "1871年普法战争后巴黎无产阶级建立的革命政权"
+  },
+  {
+    "id": "emancipation_proclamation",
+    "cardName": "解放奴隶宣言",
+    "era": 1863,
+    "triggerCondition": "美国处于内战状态",
+    "targetCountry": 9,
+    "description": "美国声望+3，但殖民资源产量下降20%",
+    "history": "1863年林肯发布的解放叛乱州奴隶的宣言"
+  },
+  {
+    "id": "scramble_for_africa",
+    "cardName": "非洲争夺",
+    "era": 1884,
+    "triggerCondition": "4个及以上玩家在非洲区域有至少2块土地",
+    "targetCountry": -1,
+    "description": "所有玩家殖民资源产量提升20%，农业派满意度-2",
+    "history": "1884-1885年柏林会议后欧洲列强对非洲的疯狂瓜分"
+  },
+  {
+    "id": "taiping_rebellion",
+    "cardName": "太平天国运动",
+    "era": 1850,
+    "triggerCondition": "中国农业资源<2",
+    "targetCountry": 5,
+    "description": "农业产量下降40%，但立即获得一张工业自强运动卡牌",
+    "history": "1850-1864年中国大规模内战，深刻影响晚清政局"
+  },
+  {
+    "id": "vienna_exhibition",
+    "cardName": "维也纳世博会",
+    "era": 1873,
+    "triggerCondition": "奥地利工业资源>10",
+    "targetCountry": 8,
+    "description": "奥匈帝国声望提升2",
+    "history": "1873年维也纳世界博览会，展示奥匈帝国文化与工业成就"
+  }
+]
