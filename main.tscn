@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxb0omrt2dqwf"]
+[gd_scene load_steps=2 format=3 uid="uid://cxb0omrt2dqwf"]
 
 [ext_resource type="Script" uid="uid://cdsnpjbuhlxwa" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="StyleBox" path="res://card_style.tres" id="2_h8k3l"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ig7tw")
@@ -10,101 +9,63 @@ script = ExtResource("1_ig7tw")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0.117647, 0.117647, 0.196078, 1)
 
 [node name="GameTitle" type="Label" parent="."]
-offset_left = 400.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
 offset_top = 50.0
-offset_right = 400.0
-offset_bottom = 50.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 text = "帝国：博弈"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="CardContainer" type="HBoxContainer" parent="."]
-offset_left = 200.0
+[node name="CardScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 50.0
 offset_top = 150.0
-offset_right = 1000.0
-offset_bottom = 450.0
-theme_override_constants/separation = 20
+offset_right = -50.0
+offset_bottom = -100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
 
-[node name="Card1" type="Panel" parent="CardContainer"]
-custom_minimum_size = Vector2(150, 250)
+[node name="CardContainer" type="HBoxContainer" parent="CardScrollContainer"]
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
-theme_override_styles/panel = ExtResource("2_h8k3l")
-
-[node name="Card1#Card1Label" type="Label" parent="CardContainer/Card1"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "维多利亚女王
-领袖卡
-
-技能: 殖民开拓
-每回合额外获得1张殖民资源卡"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Card2" type="Panel" parent="CardContainer"]
-custom_minimum_size = Vector2(150, 250)
-layout_mode = 2
-theme_override_styles/panel = ExtResource("2_h8k3l")
-
-[node name="Card2#Card2Label" type="Label" parent="CardContainer/Card2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 9.0
-offset_right = -10.0
-offset_bottom = -11.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "俾斯麦
-领袖卡
-
-技能: 军事同盟
-强制与其他国家共同攻击第三方"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Card3" type="Panel" parent="CardContainer"]
-custom_minimum_size = Vector2(150, 250)
-layout_mode = 2
-theme_override_styles/panel = ExtResource("2_h8k3l")
-
-[node name="Card3#Card3Label" type="Label" parent="CardContainer/Card3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 12.0
-offset_right = -8.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "谷物法废除
-政策卡
-
-效果: 降低工业资源获取成本，提升贸易路线收益"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2, -1)
-offset = Vector2(575, 324)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
+position = Vector2(960, 540)
+
+[node name="CardInfo" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -80.0
+offset_right = 400.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "点击卡牌查看详细信息"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

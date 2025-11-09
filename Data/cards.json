@@ -1,0 +1,162 @@
+[
+  {
+    "id": "victoria",
+    "cardName": "维多利亚女王",
+    "country": 0,
+    "era": 1837,
+    "influence": 5,
+    "faction": 0,
+    "skills": [
+      {
+        "id": "sun_never_sets",
+        "name": "日不落帝国",
+        "description": "抽取2张殖民资源卡，议会区域工业派影响力+2",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "bismarck",
+    "cardName": "奥托·冯·俾斯麦",
+    "country": 1,
+    "era": 1862,
+    "influence": 4,
+    "faction": 1,
+    "skills": [
+      {
+        "id": "blood_iron",
+        "name": "铁血政策",
+        "description": "对敌方造成3点伤害，抽1张牌",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "napoleon_iii",
+    "cardName": "拿破仑三世",
+    "country": 2,
+    "era": 1852,
+    "influence": 4,
+    "faction": 1,
+    "skills": [
+      {
+        "id": "paris_reconstruction",
+        "name": "巴黎改造",
+        "description": "获得3点工业资源，但声望-1",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "alexander_ii",
+    "cardName": "亚历山大二世",
+    "country": 3,
+    "era": 1855,
+    "influence": 4,
+    "faction": 0,
+    "skills": [
+      {
+        "id": "serf_emancipation",
+        "name": "农奴改革",
+        "description": "每回合可免费使用1张改革卡，弃1张手牌",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "abdul_mejid",
+    "cardName": "阿卜杜勒-迈吉德一世",
+    "country": 4,
+    "era": 1839,
+    "influence": 3,
+    "faction": 0,
+    "skills": [
+      {
+        "id": "tanzimat",
+        "name": "坦志麦特改革",
+        "description": "支付1点资源抽2张卡，本回合禁止再抽卡",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "daoguang",
+    "cardName": "道光帝",
+    "country": 5,
+    "era": 1820,
+    "influence": 3,
+    "faction": 1,
+    "skills": [
+      {
+        "id": "opium_destruction",
+        "name": "虎门销烟",
+        "description": "敌方特殊卡50%概率失效，触发后声望-2",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "muhammad_ali",
+    "cardName": "穆罕默德·阿里",
+    "country": 6,
+    "era": 1805,
+    "influence": 3,
+    "faction": 0,
+    "skills": [
+      {
+        "id": "modernization_reforms",
+        "name": "现代化改革",
+        "description": "工业区域资源+1，重铸1张工业卡",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "isabella_ii",
+    "cardName": "伊莎贝拉二世",
+    "country": 7,
+    "era": 1833,
+    "influence": 3,
+    "faction": 1,
+    "skills": [
+      {
+        "id": "constitutional_monarchy",
+        "name": "君主立宪",
+        "description": "控制议会时跳过敌方特殊卡回合",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "franz_joseph",
+    "cardName": "弗朗茨·约瑟夫一世",
+    "country": 8,
+    "era": 1848,
+    "influence": 4,
+    "faction": 1,
+    "skills": [
+      {
+        "id": "dual_monarchy",
+        "name": "双元帝国",
+        "description": "控制2个区域时每回合+1资源",
+        "trigger": 0
+      }
+    ]
+  },
+  {
+    "id": "cleveland",
+    "cardName": "格罗夫·克利夫兰",
+    "country": 9,
+    "era": 1885,
+    "influence": 2,
+    "faction": 0,
+    "skills": [
+      {
+        "id": "civil_service_reform",
+        "name": "文官制度改革",
+        "description": "手牌≤3时抽1卡，工业派影响力+1",
+        "trigger": 0
+      }
+    ]
+  }
+]
