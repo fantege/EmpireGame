@@ -4,19 +4,52 @@ extends Node2D
 var card_data = []
 var card_nodes = []
 
+# 新增：主牌堆/事件牌堆/弃牌堆与计数
+var main_deck: Array = []
+var event_deck: Array = []
+var discard_pile: Array = []
+
+# UI字体
+var ui_font: Font
+
 # 节点引用
 @onready var card_container = $CardScrollContainer/CardContainer
 @onready var card_info_label = $CardInfo
+@onready var deck_panel = $DeckPanel
+@onready var event_deck_panel = $EventDeckPanel
+@onready var discard_panel = $DiscardPilePanel
+@onready var deck_label: Label = $DeckPanel/DeckLabel
+@onready var event_deck_label: Label = $EventDeckPanel/EventDeckLabel
+@onready var discard_label: Label = $DiscardPilePanel/DiscardLabel
+@onready var leader_name_container: Control = $LeaderNameContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("帝国：博弈 - 卡牌游戏界面已加载")
+	# 统一加载字体并应用到关键标签
+	ui_font = load("res://fonts.ttf")
+	if ui_font:
+		card_info_label.add_theme_font_override("font", ui_font)
+		deck_label.add_theme_font_override("font", ui_font)
+		event_deck_label.add_theme_font_override("font", ui_font)
+		discard_label.add_theme_font_override("font", ui_font)
 	
 	# 加载卡牌数据
 	load_card_data()
 	
-	# 创建所有领袖卡
-	create_leader_cards()
+	# 隐藏旧的领袖卡展示容器
+	$CardScrollContainer.visible = false
+
+	# 构建并洗混牌堆
+	build_decks()
+	
+	# 更新计数UI
+	update_deck_ui()
+	update_event_deck_ui()
+	update_discard_ui()
+
+	# 生成领袖名称彩色矩形（4-2-4布局）
+	create_leader_name_panels()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -40,29 +73,86 @@ func load_card_data():
 	else:
 		print("无法打开卡牌数据文件")
 
+# 构建主牌堆/事件牌堆/弃牌堆
+func build_decks():
+	# 主牌堆：default.json 每种2张 + policies.json
+	var default_cards = load_json_array("res://Data/default.json")
+	var policy_cards = load_json_array("res://Data/policies.json")
+
+	main_deck.clear()
+	for c in default_cards:
+		# 每种两张
+		main_deck.append({"id": "default_" + str(hash(c)), "cardName": c.get("cardName", c.get("name", "")), "source": "default", "meta": c})
+		main_deck.append({"id": "default_" + str(hash(c)) + "_dup", "cardName": c.get("cardName", c.get("name", "")), "source": "default", "meta": c})
+	for c in policy_cards:
+		main_deck.append({"id": "policy_" + str(hash(c)), "cardName": c.get("cardName", c.get("name", "")), "source": "policy", "meta": c})
+	
+	main_deck.shuffle()
+
+	# 事件牌堆：events.json
+	var event_cards = load_json_array("res://Data/events.json")
+	event_deck.clear()
+	for c in event_cards:
+		event_deck.append({"id": "event_" + str(hash(c)), "cardName": c.get("cardName", c.get("name", "")), "source": "event", "meta": c})
+	event_deck.shuffle()
+
+	# 弃牌堆初始化
+	discard_pile.clear()
+
+# 通用：加载JSON数组
+func load_json_array(path: String) -> Array:
+	var result: Array = []
+	var f = FileAccess.open(path, FileAccess.READ)
+	if f:
+		var txt = f.get_as_text()
+		f.close()
+		var json = JSON.new()
+		var ok = json.parse(txt)
+		if ok == OK:
+			var data = json.data
+			if typeof(data) == TYPE_ARRAY:
+				result = data
+			else:
+				print("JSON数据结构非数组:", path)
+		else:
+			print("JSON解析失败:", path, " ", json.get_error_message())
+	else:
+		print("无法打开文件:", path)
+	return result
+
+# 计数UI更新
+func update_deck_ui():
+	deck_label.text = "牌堆：" + str(main_deck.size())
+
+func update_event_deck_ui():
+	event_deck_label.text = "事件牌堆：" + str(event_deck.size())
+
+func update_discard_ui():
+	discard_label.text = "弃牌堆：" + str(discard_pile.size())
+
 # 创建所有领袖卡
 func create_leader_cards():
 	# 清除现有卡牌
 	for child in card_container.get_children():
 		child.queue_free()
-	
+
 	card_nodes.clear()
-	
+
 	print("开始创建卡牌UI，卡牌数量: ", card_data.size())
 	print("卡牌容器: ", card_container.name, " 子节点数: ", card_container.get_child_count())
-	
+
 	# 设置容器间距
 	if card_container.has_method("add_theme_constant_override"):
 		card_container.add_theme_constant_override("separation", 20)  # 卡牌间距20像素
-	
+
 	# 计算最佳卡牌尺寸以适应窗口
 	var scroll_container = get_node("CardScrollContainer")
 	var available_width = scroll_container.size.x - 40  # 留出一些边距
 	var max_card_width = available_width / card_data.size()
 	var target_card_width = min(max_card_width, 160)  # 使用计算值或默认值中的较小者
-	
+
 	print("可用宽度: ", available_width, " 最大卡牌宽度: ", max_card_width, " 目标宽度: ", target_card_width)
-	
+
 	# 为每张领袖卡创建UI
 	for current_card_info in card_data:
 		var card_node = create_card_ui(current_card_info, target_card_width)
@@ -70,7 +160,7 @@ func create_leader_cards():
 			card_container.add_child(card_node)
 			card_nodes.append(card_node)
 			print("创建卡牌: ", current_card_info.cardName)
-	
+
 	print("卡牌创建完成，总卡牌数: ", card_nodes.size())
 
 # 创建单个卡牌UI
@@ -81,12 +171,12 @@ func create_card_ui(card_info, card_width = 160):
 	card_panel.custom_minimum_size = Vector2(card_width, card_height)
 	card_panel.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	card_panel.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
-	
+
 	# 确保卡牌可见
 	card_panel.visible = true
-	
+
 	print("创建卡牌面板: ", card_info.cardName, " 大小: ", card_panel.custom_minimum_size)
-	
+
 	# 应用样式
 	if ResourceLoader.exists("res://card_style.tres"):
 		var style = load("res://card_style.tres")
@@ -101,7 +191,7 @@ func create_card_ui(card_info, card_width = 160):
 		default_style.border_width_left = 2
 		default_style.border_width_right = 2
 		card_panel.add_theme_stylebox_override("panel", default_style)
-	
+
 	# 创建卡牌内容标签
 	var card_label = Label.new()
 	card_label.name = "CardLabel"
@@ -112,33 +202,35 @@ func create_card_ui(card_info, card_width = 160):
 	card_label.offset_bottom = -15
 	card_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	card_label.grow_vertical = Control.GROW_DIRECTION_BOTH
-	
+
 	# 构建卡牌文本
 	var card_text = card_info.cardName + "\n"
 	card_text += "影响力: " + str(card_info.influence) + "\n"
 	card_text += "时代: " + str(card_info.era) + "\n\n"
-	
+
 	if card_info.skills and card_info.skills.size() > 0:
 		card_text += "技能: " + card_info.skills[0].name + "\n"
 		card_text += card_info.skills[0].description
-	
+
 	card_label.text = card_text
 	card_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	card_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	card_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	card_label.add_theme_font_size_override("font_size", 14)
-	
+	if ui_font:
+		card_label.add_theme_font_override("font", ui_font)
+
 	# 添加到卡牌面板
 	card_panel.add_child(card_label)
-	
+
 	# 添加交互
 	card_panel.gui_input.connect(_on_card_gui_input.bind(card_info))
 	card_panel.mouse_filter = Control.MOUSE_FILTER_STOP
-	
+
 	# 添加悬停效果
 	card_panel.mouse_entered.connect(_on_card_mouse_entered.bind(card_info))
 	card_panel.mouse_exited.connect(_on_card_mouse_exited.bind(card_info))
-	
+
 	return card_panel
 
 # 卡牌交互处理函数
@@ -152,15 +244,81 @@ func _on_card_mouse_entered(card_info):
 	update_card_info(card_info)
 
 func _on_card_mouse_exited(card_info):
-	card_info_label.text = "点击卡牌查看详细信息"
+	card_info_label.text = ""
 
 # 更新卡牌信息显示
 func update_card_info(card_info):
 	var info_text = "【" + card_info.cardName + "】\n"
 	info_text += "影响力: " + str(card_info.influence) + "  |  时代: " + str(card_info.era) + "\n"
-	
+
 	if card_info.skills and card_info.skills.size() > 0:
 		info_text += "技能: " + card_info.skills[0].name + "\n"
 		info_text += card_info.skills[0].description
-	
+
 	card_info_label.text = info_text
+
+# 生成领袖名称彩色矩形并布局（左4、上2、右4）
+func create_leader_name_panels():
+	# 清空旧节点
+	for child in leader_name_container.get_children():
+		child.queue_free()
+
+	var name_items: Array = []
+	for c in card_data:
+		var color = Color(1,1,1,1)
+		if c.has("countryColor"):
+			var cc = c.countryColor
+			if typeof(cc) == TYPE_STRING:
+				# 解析十六进制颜色字符串，例如 "#C8102E"
+				color = Color(cc)
+			elif typeof(cc) == TYPE_DICTIONARY and cc.has("r") and cc.has("g") and cc.has("b"):
+				var a = float(cc.a) if cc.has("a") else 1.0
+				color = Color(float(cc.r), float(cc.g), float(cc.b), a)
+		name_items.append({"name": c.cardName, "color": color})
+
+	# 固定布局：不使用公式计算，人工设定等距与边距相等
+	var panel_size = Vector2(140, 40)
+	var positions: Array = [
+		# 顶部两个：整体左移避免与事件槽重叠（保持相对距离不变）
+		Vector2(410, 80),
+		Vector2(950, 80),
+		# 右侧四个：保持 x=1540，起始 y 下移到事件槽下方；竖直间距 x=200，避免溢出且底部间距不大于 x 太多
+		Vector2(1540, 310),
+		Vector2(1540, 510),
+		Vector2(1540, 710),
+		Vector2(1540, 910),
+		# 左侧四个：保持 x=40，y 与右侧分别对齐
+		Vector2(40, 310),
+		Vector2(40, 510),
+		Vector2(40, 710),
+		Vector2(40, 910)
+	]
+
+	var count = min(name_items.size(), positions.size())
+	for i in range(count):
+		var item = name_items[i]
+		var panel = Panel.new()
+		panel.custom_minimum_size = panel_size
+		panel.position = positions[i]
+		var sb = StyleBoxFlat.new()
+		sb.bg_color = item.color
+		sb.border_color = Color(1,1,1,1)
+		sb.border_width_bottom = 2
+		sb.border_width_top = 2
+		sb.border_width_left = 2
+		sb.border_width_right = 2
+		panel.add_theme_stylebox_override("panel", sb)
+
+		var label = Label.new()
+		label.text = item.name
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		if ui_font:
+			label.add_theme_font_override("font", ui_font)
+			var fs = 16
+			if item.name == "阿卜杜勒-迈吉德一世":
+				fs = 14
+			label.add_theme_font_size_override("font_size", fs)
+		panel.add_child(label)
+		leader_name_container.add_child(panel)
